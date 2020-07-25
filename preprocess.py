@@ -29,4 +29,26 @@ def cleanIngredients():
 
     opFile.close()
 
-cleanIngredients()
+def uniqueIngredients():
+    filePath = os.getcwd() + '/Data/annotations/cleaned_ingredients.txt'
+    ingredients = []
+
+    with open(filePath) as dataset:
+        line = dataset.readline().strip()
+
+        while line:
+            ingredients.extend(line.split(','))
+
+            line = dataset.readline().strip()
+
+    ingredients = set(ingredients)
+
+    opFile = open(os.getcwd() + '/Data/annotations/all_ingredients.txt', 'w+')
+
+    for i in ingredients:
+        opFile.write(i + '\n')
+
+    opFile.close()
+
+# cleanIngredients()
+uniqueIngredients()
