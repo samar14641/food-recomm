@@ -2,10 +2,10 @@ import os
 # import unicodedata
 
 
-filePath = os.getcwd() + '/Data/annotations/ingredients_simplified_Recipes5k.txt'
 toRemove = set(['& half', '& half\n'])  # list of ingredients to remove
 
-def clean():
+def cleanIngredients():
+    filePath = os.getcwd() + '/Data/annotations/ingredients_simplified_Recipes5k.txt'
     cleaned = []
 
     with open(filePath) as dataset:
@@ -29,4 +29,4 @@ def clean():
 
     opFile.close()
 
-clean()
+cleanIngredients()
