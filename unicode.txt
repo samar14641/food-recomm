@@ -1,0 +1,10 @@
+Unicode symbols and replacements
+
+\u00ae ''
+\u00e2 a
+\u00e8 e
+\u00e9 e
+\u00ee i
+\u00fa u
+\u00fc u
+\u2122 ''
