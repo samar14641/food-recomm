@@ -20,7 +20,7 @@ def cleanIngredients():
                 
             cleaned.append(ingredients)
 
-            line = dataset.readline()
+            line = dataset.readline().lower().strip()
 
     opFile = open(os.getcwd() + '/Data/annotations/cleaned_ingredients.txt', 'w+')
 
